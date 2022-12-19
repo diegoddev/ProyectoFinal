@@ -1,0 +1,42 @@
+{% extends "appblog/base.html" %}
+{% load static %}
+
+
+{% block TitleBanner %}
+<div id="latestalbum" class="hero pad">
+    <div class="container">
+        <!-- hero content -->
+        <div class="hero-content ">
+            <!-- heading -->
+            <h2><a href="{% url 'post-list' %}"><i class="fa fa-arrow-circle-left"></i></a> Volver</h2>
+            <hr>
+        </div>
+        <br>
+        <br>
+        <form method="post" enctype="multipart/form-data">
+
+                {% if errores %}
+                    <p style="color: red">{{errores}}</p>
+                {% endif %}
+
+                <div class="item mb-5">
+                    <div class="media">
+                        <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{{post.imagen.url}}" alt="image" width="400" height="300">
+                        <div class="media-body">
+                            <h3 class="title mb-1">{{post.titulo}}</h3>
+                            <h4 class="title mb-1">{{post.subtitulo}}</h4>
+                            <div class="meta mb-1"><span class="date"><em>Autor: {{post.autor}} | Fecha de publicación: {{post.fecha}}</em></div>
+                            <br>
+                            <div class="intro">{{post.contenido}}</div>
+                        </div><!--//media-body-->
+                    </div><!--//media-->
+                </div><!--//item--> 
+                <hr>  
+                <br>
+                <br>
+        </form>
+    </div>
+</div>
+<hr>
+
+{% endblock %}

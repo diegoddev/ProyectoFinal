@@ -1,0 +1,46 @@
+{% extends "appblog/base.html" %}
+{% load static %}
+
+{% block TitleBanner %}
+<div class="banner">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="{% static 'appblog/img/banner/b4.jpg' %}" alt="...">
+                <div class="container">
+                    <!-- banner caption -->
+                    <div class="carousel-caption slide-one">
+                        <!-- heading -->
+                        <h2 class="animated fadeInLeftBig"><i class="fa fa-coffee"></i>Acerca de nosotros...</h2>
+                        <hr>
+                        <!-- paragraph -->
+                        <h4 class="animated fadeInRightBig" align="justify">
+                            Coffee blog es una espacio en donde los amantes de las cafeterías pueden publicar y compartir artículos sobre todo lo relacionado a este negocio.
+                            Puedes encontrar publicaciones acerca de los mejores cafés y/o delicias para acompañar, como también temas de cómo impacta en nuestra salud.<br><br>
+                            
+                            En esta comunidad se comparten las distintas variedades de café que se consumen en distintas regiones del mundo, también puedes encontrar publicaciones
+                            relacionadas a la historia del café y otros tópicos, como las infusiones que se puedes realizan con este maravilloso grano.<br><br>
+                            
+                            Este blog es creado por Matias, Nidia y Diego, entusiastas del café y la pastelería:<br><br>
+                            <ul>
+                            <li>
+                                Diego, se desempeña actualmente en seguridad aplicativa y simepre disfruta un buen café para mantenerse activo en las jornadas laborales.
+                            </li>
+                            <li>
+                            Nidia, trabaja y emprende de forma estrecha con el café y delicateses teniendo muy buena relación con este negocio.
+                            </li>
+                            <li>
+                            Matias, dentro de su tiempo de trabajo y estudio encontró el café como combustible para sus largas jornadas diarías lo cual lo hace un gran conocedor del tema.
+                            </li>
+                            </ul>
+                        </h4>								
+                        <!-- button -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

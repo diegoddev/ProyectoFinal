@@ -1,0 +1,30 @@
+{% extends "appblog/base.html" %}
+{% load static %}
+
+{% block TitleBanner %}
+
+
+<div class="banner">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="{% static 'appblog/img/banner/b3.jpg' %}" alt="...">
+                <div class="container">
+                    <!-- banner caption -->
+                    <div class="carousel-caption slide-one">
+                        <!-- heading -->
+                        <h2 class="animated fadeInLeftBig"><i class="fa fa-coffee"></i>Coffee Blog</h2>
+                        <hr>
+                        <!-- paragraph -->
+                        <h3 class="animated fadeInRightBig">Explora y conoce el mundo del café</h3>
+                        <h4 class="animated fadeInRightBig">Comparte tus experiencias y conocimientos</h4>							
+                        <!-- button -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock%}

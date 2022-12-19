@@ -1,0 +1,51 @@
+{% extends "appblog/base.html" %}
+{% load static %}
+
+
+{% block TitleBanner %}
+<div id="latestalbum" class="hero pad">
+    <div class="container">
+        <!-- hero content -->
+        <div class="hero-content ">
+            <!-- heading -->
+            <h2>Feed</h2>
+            <hr>
+            <!-- paragraph -->
+            <p>Encuentra todas tus publicaciones.</p>
+        </div>
+        <br>
+        <br>
+
+        <div class="main-wrapper">
+            <section class="blog-list px-3 py-5 p-md-5">
+                <div class="container">
+        
+                    {% for post in object_list %}
+        
+                    <div class="item mb-5">
+                        <div class="media">
+                            <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{{post.imagen.url}}" alt="image" width="400" height="300">
+                            <div class="media-body">
+                                <h3 class="title mb-1"><u>{{post.titulo}}</u> | <a href="{% url 'post-delete' post.id %}"><i class="fa fa-trash"></i></a> | <a href="{% url 'post-update' post.id %}"><i class="fa fa-pencil"></i></a></h3>
+                                <h4 class="title mb-1">{{post.subtitulo}}</h4>
+                                <div class="meta mb-1"><span class="date">Autor: {{post.autor}} | Fecha de publicación: {{post.fecha}}</div>
+                                <a class="more-link" href="{% url 'post-detail' post.id %}">Leer más &rarr;</a>
+                            </div><!--//media-body-->
+                        </div><!--//media-->
+                    </div><!--//item--> 
+                    <hr>  
+                    <br>
+                    
+                    {% endfor %}
+        
+                </div>
+            </section>
+            
+        </div><!--//main-wrapper-->
+
+
+    </div>
+</div>
+
+
+{% endblock %}

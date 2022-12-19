@@ -1,0 +1,31 @@
+{% extends "appblog/base.html" %}
+{% load static %}
+
+
+{% block TitleBanner %}
+<div id="latestalbum" class="hero pad">
+    <div class="container">
+        <!-- hero content -->
+        <div class="hero-content ">
+            <!-- heading -->
+            <h2>Mi Perfil</h2>
+            <hr>
+            <!-- paragraph -->
+            <p>Visualiza y modifica tus datos</p>
+        </div>
+        <br>
+        <br>
+        <!--formulario-->
+        <h2>Datos:</h2>
+        <form method="post" enctype="multipart/form-data">
+
+                {% csrf_token %}
+                {{form.as_p}}
+                <br>
+                <input type="submit" value="Guardar">
+        </form>
+    </div>
+</div>
+<hr>
+
+{% endblock %}

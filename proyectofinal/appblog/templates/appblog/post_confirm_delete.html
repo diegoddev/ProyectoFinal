@@ -1,0 +1,37 @@
+{% extends "appblog/base.html" %}
+{% load static %}
+
+
+{% block TitleBanner %}
+<div id="latestalbum" class="hero pad">
+    <div class="container">
+        <!-- hero content -->
+        <div class="hero-content ">
+            <!-- heading -->
+            <h2>Feed</h2>
+            <hr>
+            <!-- paragraph -->
+            <p>Realiza y encuentra todas tus publicaciones.</p>
+        </div>
+        <br>
+        <br>
+        <!--formulario-->
+        <h2>Borrar:</h2>
+        <form method="post" enctype="multipart/form-data">
+
+                {% csrf_token %}
+                
+                <p>¿Estás seguro que deseas borrar el post '{{object.titulo}}'</p>
+
+                <br>
+                <input type="submit" value="SI">
+
+                <a href="{% url 'post-list' %}">Volver</a>
+        </form>
+    </div>
+</div>
+<hr>
+
+
+
+{% endblock %}
